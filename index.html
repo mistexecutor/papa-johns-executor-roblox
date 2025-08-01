@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Papa Johns Executor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="executor-window">
+    <div class="title-bar">🍕 Papa Johns Executor</div>
+    
+    <div class="dropdown">
+      <label for="scriptSelect">Preset Scripts:</label>
+      <select id="scriptSelect">
+        <option value="">-- Select a script --</option>
+        <option value="print('Flying enabled!')">Fly Script</option>
+        <option value="print('Speed set to 100')">Speed Script</option>
+        <option value="print('Infinite jump activated!')">Infinite Jump</option>
+      </select>
+      <button onclick="loadScript()">Load</button>
+    </div>
+
+    <textarea id="scriptInput" placeholder="Type or paste your script here..."></textarea>
+    
+    <div class="buttons">
+      <button onclick="executeScript()">Execute</button>
+      <button onclick="clearScript()">Clear</button>
+    </div>
+
+    <div id="consoleOutput">Console output will appear here...</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
